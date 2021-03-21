@@ -16,9 +16,9 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'brooth/far.vim' " crossbuffer find & replace
 Plug 'danro/rename.vim', { 'on': 'Rename' } " rename a file inline :Rename
 Plug 'yegappan/mru' " most recently used files :MRU
-Plug 'junegunn/fzf.vim' " search through stuff :Files :GFiles :Ag
-  Plug '/usr/local/opt/fzf'
 Plug 'https://github.com/Alok/notational-fzf-vim' " fzf powered note-taker :NV
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
 
 " editing enhancements
 Plug 'Raimondi/delimitMate' " auto close quotes, parens, etc
