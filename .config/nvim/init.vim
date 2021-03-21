@@ -10,6 +10,14 @@ function! DoRemote(arg)
   UpdateRemotePlugins
 endfunction
 
+let g:coc_global_extensions = [
+  \ 'coc-json',
+  \ 'coc-tsserver',
+  \ 'coc-highlight',
+  \ 'coc-rls',
+  \ 'coc-rust-analyzer'
+\ ]
+
 call plug#begin('~/.config/nvim/plugged')
 
 " utils
