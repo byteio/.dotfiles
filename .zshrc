@@ -72,6 +72,7 @@ alias tma="tmux attach-session -t"
 alias tmad="tmux attach-session -dt"
 alias tmux="tmux -2 -u"
 alias ag="rg"
+alias vim="nvim"
 
 export FZF_BASE=/usr/bin
 #export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
