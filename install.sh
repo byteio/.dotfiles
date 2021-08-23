@@ -33,7 +33,8 @@ stow zsh
 
 ################ MISC
 
-#zsh as default shel
+#zsh as default shell
+command -v zsh | sudo tee -a /etc/shells
 sudo chsh -s $(which zsh)
 
 #install NVS
