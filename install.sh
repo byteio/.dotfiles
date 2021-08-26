@@ -23,6 +23,7 @@ nix-env -iA \
   nixpkgs.wget \
   nixpkgs.powerline \
   nixpkgs.gnumake \
+  nixpkgs.gcc \
   nixpkgs.bpytop
 
 ################ STOW
