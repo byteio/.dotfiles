@@ -19,6 +19,7 @@ set completeopt-=preview
 set completeopt=longest,menuone,menu
 set incsearch 
 set showmatch
+set clipboard+=unnamedplus
 
 " Resize splits when the window is resized
 au VimResized * exe "normal! \<c-w>="
