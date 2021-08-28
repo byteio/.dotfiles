@@ -68,7 +68,7 @@ hi Type         gui=NONE guifg=#ffc864 guibg=NONE
 hi Underlined   gui=UNDERLINE guifg=#f0f0f8 guibg=NONE
 
 hi Pmenu        guifg=#FFFFFF guibg=#000000
-hi link ScrollView Pmenu
+hi ScrollView   guifg=#FFFFFF guibg=#FFFFFF
 
 " HTML
 hi htmlLink                 gui=UNDERLINE
