@@ -93,6 +93,8 @@ let g:airline#extensions#tabline#buffer_nr_show = 1 " show buffer numbers
 
 " bind fzf to ctrlp
 nnoremap <C-p> :FZF<cr>
+" use rg for ctrlp
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
 
 " roxma/vim-tmux-clipboard settings
 highlight HighlightedyankRegion cterm=reverse gui=reverse
