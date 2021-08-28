@@ -1,4 +1,5 @@
-colorscheme wombat256
+set termguicolors 
+colorscheme custom
 set nocompatible   " vi -> improved
 set backupcopy=yes
 set number         " show line numbers
