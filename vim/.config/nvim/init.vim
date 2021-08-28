@@ -69,6 +69,7 @@ Plug 'dahu/vim-asciidoc' " asciidoc
 " superficial
 Plug 'vim-airline/vim-airline'        " status bar
 Plug 'vim-airline/vim-airline-themes' " status bar themes
+Plug 'norcalli/nvim-colorizer.lua'    " better colors
 
 call plug#end()
 
