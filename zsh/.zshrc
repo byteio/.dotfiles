@@ -20,7 +20,7 @@ export PATH=$PATH:/usr/local/go/bin
 export EDITOR=/usr/local/bin/vim
 export GOPATH=/home/leo/projects/go
 export GOROOT=/usr/local/go
-export TERM=screen-256color
+export TERM=xterm-256color
 export NVS_HOME="$HOME/.nvs"
 [ -s "$NVS_HOME/nvs.sh" ] && . "$NVS_HOME/nvs.sh"
 
