@@ -71,9 +71,11 @@ Plug 'vim-airline/vim-airline'        " status bar
 Plug 'vim-airline/vim-airline-themes' " status bar themes
 Plug 'norcalli/nvim-colorizer.lua'    " better colors
 Plug 'dstein64/nvim-scrollview'       " non-interactive scroll-bars
+Plug 'vim-scripts/scrollcolors'       " theme picker: SCROLLCOLORS
 
 call plug#end()
 
+lua require'colorizer'.setup()
 
 " ********* PLUGIN SETTINGS ********
 
