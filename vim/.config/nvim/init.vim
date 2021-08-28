@@ -70,6 +70,7 @@ Plug 'dahu/vim-asciidoc' " asciidoc
 Plug 'vim-airline/vim-airline'        " status bar
 Plug 'vim-airline/vim-airline-themes' " status bar themes
 Plug 'norcalli/nvim-colorizer.lua'    " better colors
+Plug 'dstein64/nvim-scrollview'       " non-interactive scroll-bars
 
 call plug#end()
 
