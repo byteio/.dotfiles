@@ -67,6 +67,7 @@ hi Todo         gui=BOLD,UNDERLINE guifg=#ffa0a0 guibg=NONE
 hi Type         gui=NONE guifg=#ffc864 guibg=NONE
 hi Underlined   gui=UNDERLINE guifg=#f0f0f8 guibg=NONE
 
+hi CocWarningHighlight guifg=#000000 guibg=#ffc864
 hi Pmenu        guifg=#FFFFFF guibg=#000000
 hi ScrollView   guifg=#FFFFFF guibg=#FFFFFF
 
