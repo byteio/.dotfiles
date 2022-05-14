@@ -46,7 +46,6 @@ Plug 'itchyny/vim-cursorword' " underline the word under the cursor
 Plug 'machakann/vim-highlightedyank' " highlight yanked content
 
 " language support
-" Plug 'rust-lang/rust.vim' " rust - not needed cuz of coc-rls?
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " go
 Plug 'b4winckler/vim-objc' " obc-c
 " Plug 'leafgarland/typescript-vim' " typescript syntax checking
