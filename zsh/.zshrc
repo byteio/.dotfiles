@@ -15,6 +15,7 @@ alias ag="rg"
 alias vim="nvim"
 alias btop="bpytop"
 alias gco="git checkout"
+alias gpo="git pull origin $1"
 
 export FZF_BASE=/usr/bin
 export PATH=$PATH:/usr/local/go/bin
