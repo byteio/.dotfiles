@@ -30,7 +30,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 " editing enhancements
 Plug 'Raimondi/delimitMate' " auto close quotes, parens, etc
-Plug 'ervandew/supertab' " smart tab triggered autocomplete
 
 " integrations
 Plug 'christoomey/vim-tmux-navigator' " vim hotkeys to jump into another tmux pane
@@ -100,9 +99,6 @@ let g:highlightedyank_highlight_duration = 150
 " Alok/notational-fzf-vim settings
 let g:nv_search_paths = ["~/fz-notes", "~/LOG.md"]
 
-" ervandew/supertab settings
-let g:SuperTabDefaultCompletionType = "<C-x><C-o>"
-
 " ********* FILE EXTENSIONS ********
 "
 au BufNewFile,BufRead *.nunj set ft=jinja
@@ -141,3 +137,7 @@ let g:far#source = "ag"
 
 nmap <silent> [[ <Plug>(coc-diagnostic-prev)
 nmap <silent> ]] <Plug>(coc-diagnostic-next)
+
+" tab completion
+inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
+inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
