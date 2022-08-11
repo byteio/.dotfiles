@@ -14,6 +14,7 @@ alias tmux="tmux -2 -u"
 alias ag="rg"
 alias vim="nvim"
 alias btop="bpytop"
+alias gco="git checkout"
 
 export FZF_BASE=/usr/bin
 export PATH=$PATH:/usr/local/go/bin
