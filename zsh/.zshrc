@@ -11,7 +11,7 @@ source $ZSH/oh-my-zsh.sh
 alias tma="tmux attach-session -t"
 alias tmad="tmux attach-session -dt"
 alias tmux="tmux -2 -u"
-alias ag="rg"
+alias ag="rg -S"
 alias vim="nvim"
 alias btop="bpytop"
 alias gco="git checkout"
