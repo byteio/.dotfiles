@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH="/home/leo/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 #language settings
 export LC_ALL=C 
@@ -20,7 +20,7 @@ alias gpo="git pull origin $1"
 export FZF_BASE=/usr/bin
 export PATH=$PATH:/usr/local/go/bin
 export EDITOR=/usr/local/bin/vim
-export GOPATH=/home/leo/projects/go
+export GOPATH=$HOME/projects/go
 export GOROOT=/usr/local/go
 export TERM=xterm-256color
 export NVS_HOME="$HOME/.nvs"
