@@ -5,7 +5,7 @@ My portable dev environment.
 
 ## How It Works
 
-Run `install.sh` to get things going in a fresh environment.
+`cd` into the `.dotfiles.` directory and run `install.sh` to get things going in a fresh environment.
 
 ### nix
 
