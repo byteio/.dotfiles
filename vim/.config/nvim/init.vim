@@ -3,6 +3,8 @@ so $HOME/.config/nvim/vimrc/basic-settings.vim
 " ********* KEY BINDS ********
 so $HOME/.config/nvim/vimrc/key-bindings.vim
 
+colorscheme darkspectrum
+
 " ********* PLUGINS **********
 
 " async autocomlete
