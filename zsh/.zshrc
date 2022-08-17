@@ -27,7 +27,6 @@ export TERM=xterm-256color
 export NVS_HOME="$HOME/.nvs"
 [ -s "$NVS_HOME/nvs.sh" ] && . "$NVS_HOME/nvs.sh"
 
-eval "$(direnv hook zsh)"
 
 #auto ls after a CD
 function chpwd() {
@@ -50,3 +49,5 @@ plugins=(git fzf)
 if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then . ~/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
 export EDITOR=$(which nvim)
+
+eval "$(direnv hook zsh)"
