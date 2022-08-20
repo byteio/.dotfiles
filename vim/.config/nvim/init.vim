@@ -50,6 +50,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " go
 Plug 'b4winckler/vim-objc' " obc-c
 Plug 'Quramy/tsuquyomi' " typescript completion
 Plug 'peitalin/vim-jsx-typescript' " jsx/tsx syntax highlight
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " semantic syntax highlighting
 
 " ad-hoc frameowrk support
 " Plug 'styled-components/vim-styled-components', { 'branch': 'main' } " styled-components
@@ -142,3 +143,15 @@ highlight NonText ctermbg=none
 highlight Normal guibg=none
 highlight NonText guibg=none
 hi CocInlayHint gui=italic guibg=none guifg=#a37949 ctermbg=none
+
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = { "lua", "rust", "javascript", "typescript" },
+  sync_install = false,
+  auto_install = true,
+
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = false,
+  },
+}
