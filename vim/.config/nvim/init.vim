@@ -141,3 +141,4 @@ highlight Normal ctermbg=none
 highlight NonText ctermbg=none
 highlight Normal guibg=none
 highlight NonText guibg=none
+hi CocInlayHint gui=italic guibg=none guifg=#a37949 ctermbg=none
