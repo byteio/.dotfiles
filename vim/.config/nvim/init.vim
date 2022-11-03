@@ -138,10 +138,11 @@ inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
 inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
 
 " background color always transparent
-highlight Normal ctermbg=none
-highlight NonText ctermbg=none
-highlight Normal guibg=none
-highlight NonText guibg=none
+hi Normal ctermbg=none
+hi NonText ctermbg=none
+hi Normal guibg=none
+hi NonText guibg=none
+hi PMenu guibg=none
 hi CocInlayHint gui=italic guibg=none guifg=#a37949 ctermbg=none
 
 lua <<EOF
