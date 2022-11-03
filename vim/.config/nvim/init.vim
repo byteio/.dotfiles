@@ -92,8 +92,10 @@ let g:airline#extensions#tabline#buffer_nr_show = 1 " show buffer numbers
 let mapleader = "\<Space>"
 nnoremap <leader><leader> :bn<Enter>
 nnoremap <leader>i <Plug>(coc-codeaction)
+
 " bind fzf to ctrlp
-nnoremap <C-p> :FZF<cr>
+nnoremap <C-p> :Files<cr>
+
 " use rg for ctrlp
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
 
