@@ -1,7 +1,4 @@
 {
-  "eslint.autoFixOnSave": true,
-  "coc.preferences.formatOnSaveFiletypes": ["rust"],
-  "rust.clippy_preference":"on",
   "diagnostic.errorSign": "✘",
   "diagnostic.warningSign": "",
   "diagnostic.infoSign": "",
