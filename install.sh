@@ -5,26 +5,7 @@ sudo curl -L https://nixos.org/nix/install | sh
 # source nix
 . ~/.nix-profile/etc/profile.d/nix.sh
 
-nix-env -iA \
-  nixpkgs.neovim \
-  nixpkgs.tmux \
-  nixpkgs.zsh \
-  nixpkgs.oh-my-zsh \
-  nixpkgs.git \
-  nixpkgs.stow \
-  nixpkgs.tig \
-  nixpkgs.direnv \
-  nixpkgs.ripgrep \
-  nixpkgs.nodejs \
-  nixpkgs.rustup \
-  nixpkgs.fzf \
-  nixpkgs.fzf-zsh \
-  nixpkgs.htop \
-  nixpkgs.wget \
-  nixpkgs.powerline \
-  nixpkgs.gnumake \
-  nixpkgs.gcc \
-  nixpkgs.bpytop
+nix-env -iA nixpkgs.myPackages
 
 ################ STOW
 #use stow to install dotfiles
@@ -32,6 +13,7 @@ stow git
 stow tmux 
 stow vim
 stow zsh
+stow nix
 
 ################ MISC
 
