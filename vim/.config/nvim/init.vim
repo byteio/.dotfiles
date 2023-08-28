@@ -162,3 +162,17 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 EOF
+
+function! HighlightCursorLine()
+    highlight CursorLineHighlight ctermbg=red guibg=red
+    let l:old_cursorline = &cursorline
+    set cursorline
+    match CursorLineHighlight /\%#.\+/
+    redraw
+    sleep 300m
+    match none
+    let &cursorline = l:old_cursorline
+endfunction
+
+nnoremap <silent> <C-O> <C-O>:call HighlightCursorLine()<CR>
+nnoremap <silent> <C-I> <C-I>:call HighlightCursorLine()<CR>
