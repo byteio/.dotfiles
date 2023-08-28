@@ -22,7 +22,7 @@
         powerline
         gnumake
         gcc
-        bpytop
+        btop
         jq
         conda
       ];
