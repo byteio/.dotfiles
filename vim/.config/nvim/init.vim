@@ -50,7 +50,6 @@ Plug 'machakann/vim-highlightedyank' " highlight yanked content
 " language support
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " go
 Plug 'b4winckler/vim-objc' " obc-c
-Plug 'Quramy/tsuquyomi' " typescript completion
 Plug 'peitalin/vim-jsx-typescript' " jsx/tsx syntax highlight
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " semantic syntax highlighting
 
