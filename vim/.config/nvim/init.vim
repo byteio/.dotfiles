@@ -14,6 +14,8 @@ endfunction
 
 let g:coc_global_extensions = [
   \ 'coc-json',
+  \ 'coc-eslint',
+  \ 'coc-prettier',
   \ 'coc-tsserver',
   \ 'coc-highlight',
   \ 'coc-rust-analyzer'
