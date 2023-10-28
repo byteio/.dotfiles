@@ -178,3 +178,5 @@ endfunction
 
 nnoremap <silent> <C-O> <C-O>:call HighlightCursorLine()<CR>
 nnoremap <silent> <C-I> <C-I>:call HighlightCursorLine()<CR>
+
+ let b:ale_fixers = ['eslint']
