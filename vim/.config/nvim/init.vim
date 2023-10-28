@@ -32,7 +32,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
 
 " editing enhancements
-Plug 'Raimondi/delimitMate' " auto close quotes, parens, etc
+Plug 'cohama/lexima.vim' " auto close quotes, parens, etc
 
 " integrations
 Plug 'christoomey/vim-tmux-navigator' " vim hotkeys to jump into another tmux pane
