@@ -18,6 +18,7 @@ let g:coc_global_extensions = [
   \ 'coc-prettier',
   \ 'coc-tsserver',
   \ 'coc-highlight',
+  \ 'coc-stylelint',
   \ 'coc-rust-analyzer'
 \ ]
 
