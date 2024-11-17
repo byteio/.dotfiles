@@ -5,7 +5,10 @@ sudo curl -L https://nixos.org/nix/install | sh
 # source nix
 . ~/.nix-profile/etc/profile.d/nix.sh
 
-nix-env -iA nixpkgs.myPackages
+# we install these in logical groups to avoid using lots of memory at once
+nix-env -iA nixpkgs.bootstrapTools
+nix-env -iA nixpkgs.devTools
+nix-env -iA nixpkgs.devUtils
 
 ################ STOW
 #use stow to install dotfiles
