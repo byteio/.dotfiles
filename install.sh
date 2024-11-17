@@ -24,9 +24,6 @@ stow nix
 sudo command -v zsh | sudo tee -a /etc/shells
 sudo chsh -s $(which zsh)
 
-#install NVS
-export NVS_HOME="$HOME/.nvs"
-git clone https://github.com/jasongin/nvs "$NVS_HOME"
 
 #download iosevka nerd fonts
 wget -P /tmp https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Iosevka.zip

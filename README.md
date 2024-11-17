@@ -19,6 +19,12 @@ The gnu stow package allows one to [trivially manage dotfiles](http://brandon.in
 
 Stow automatically symlinks the dotfiles into their necessary locations in your home directory from a centralized location that can be easily managed using git (hence the directory structure of this repository), check out `install.sh` to get an idea of how it works.
 
+### proto
+
+Proto is a toolchain management tool that allows you to central manage different language toolchains in an isolated manner.
+
+Using a `.proto` file you can specify the runtime versions for various language toolchains within a particular project or directory. This ensures your project environment is always pinned to the right version needed for development.
+
 ### misc
 
 Ad-hoc extras that are nice to have.

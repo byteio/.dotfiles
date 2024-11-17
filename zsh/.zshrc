@@ -23,8 +23,6 @@ export EDITOR=/usr/local/bin/vim
 export GOPATH=$HOME/projects/go
 export GOROOT=/usr/local/go
 export TERM=xterm-256color
-export NVS_HOME="$HOME/.nvs"
-[ -s "$NVS_HOME/nvs.sh" ] && . "$NVS_HOME/nvs.sh"
 
 
 #auto ls after a CD
