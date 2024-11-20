@@ -1,11 +1,26 @@
 ################ NIX
 #install nix
-sudo curl -L https://nixos.org/nix/install | sh
+if [[ ! -n "$NIX_PROFILES" ]]; then
+    sudo curl -L https://nixos.org/nix/install | sh
+fi
 
 # source nix
 . ~/.nix-profile/etc/profile.d/nix.sh
 
-nix-env -iA nixpkgs.myPackages
+nix-channel --update -v
+
+if [ ! -f .ssh/id_rsa ]; then
+    scp leo@stanley.dev:.ssh/id_rsa leo@stanley.dev:.ssh/id_rsa.pub .ssh/
+fi
+
+# install the bootstrap tools
+nix-env -iA nixpkgs.stow
+nix-env -iA nixpkgs.git
+
+git clone git@github.com:byteio/.dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+#TODO: remove this after done testing
+git checkout test
 
 ################ STOW
 #use stow to install dotfiles
@@ -15,19 +30,29 @@ stow vim
 stow zsh
 stow nix
 
-################ MISC
+# we install these in logical groups to avoid using lots of memory at once
+nix-env -iA nixpkgs.devTools
+nix-env -iA nixpkgs.devUtils
 
+################ MISC
 #zsh as default shell
-sudo command -v zsh | sudo tee -a /etc/shells
+command -v zsh | sudo tee -a /etc/shells
 sudo chsh -s $(which zsh)
 
-#install NVS
-export NVS_HOME="$HOME/.nvs"
-git clone https://github.com/jasongin/nvs "$NVS_HOME"
+#download and install iosevka nerd fonts for Ubuntu Desktop
+if [[ -n "$XDG_SESSION_DESKTOP" ]]; then
+    wget -P /tmp https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Iosevka.zip
+    unzip /tmp/Iosevka.zip -d ~/.fonts
+    [ -f /usr/bin/fc-cache ] && sudo fc-cache
+fi
 
-#download iosevka nerd fonts
-wget -P /tmp https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Iosevka.zip
-unzip /tmp/Iosevka.zip -d ~/.fonts
+#download and install iosevka nerd fonts for macOS
+if [[ "$(uname)" == "Darwin" ]]; then
+    wget -P /tmp https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Iosevka.zip
+    unzip /tmp/Iosevka.zip -d ~/Library/Fonts
+fi
 
-#install fonts on ubuntu
-[ -f /usr/bin/fc-cache ] && sudo fc-cache
+mkdir ~/fz-notes
+proto install node
+proto install rust
+proto install bun

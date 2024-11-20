@@ -23,8 +23,6 @@ export EDITOR=/usr/local/bin/vim
 export GOPATH=$HOME/projects/go
 export GOROOT=/usr/local/go
 export TERM=xterm-256color
-export NVS_HOME="$HOME/.nvs"
-[ -s "$NVS_HOME/nvs.sh" ] && . "$NVS_HOME/nvs.sh"
 
 
 #auto ls after a CD
@@ -50,3 +48,6 @@ if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then . ~/.nix-profile/etc/profile
 export EDITOR=$(which nvim)
 
 eval "$(direnv hook zsh)"
+# proto
+export PROTO_HOME="$HOME/.proto";
+export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH";

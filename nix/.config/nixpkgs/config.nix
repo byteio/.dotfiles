@@ -1,30 +1,32 @@
 {
   packageOverrides = pkgs: with pkgs; {
-    myPackages = pkgs.buildEnv {
-      name = "leo";
+    devTools = pkgs.buildEnv {
+      name = "leo.devTools";
       paths = [
+        zsh
         neovim
         tmux
-        zsh
-        oh-my-zsh
-        git
-        stow
         tig
         direnv
+        oh-my-zsh
         ripgrep 
-        nodejs
-        rustup 
-        cargo-llvm-cov
         fzf
         fzf-zsh
+        gcc
+        proto
+      ];
+    };
+
+    devUtils = pkgs.buildEnv {
+      name = "leo.devUtils";
+      paths = [
         htop
+        btop
+        ctop
         wget
         powerline
         gnumake
-        gcc
-        btop
         jq
-        conda
       ];
     };
   };
