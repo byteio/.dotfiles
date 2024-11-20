@@ -1,16 +1,8 @@
 {
   packageOverrides = pkgs: with pkgs; {
-    bootstrapTools = pkgs.buildEnv {
-      name = "leo.bootstrapTools";
-      paths = [
-        stow
-      ];
-    };
-
     devTools = pkgs.buildEnv {
       name = "leo.devTools";
       paths = [
-        git
         zsh
         neovim
         tmux
@@ -29,11 +21,11 @@
       name = "leo.devUtils";
       paths = [
         htop
+        btop
+        ctop
         wget
         powerline
         gnumake
-        btop
-        ctop
         jq
       ];
     };
