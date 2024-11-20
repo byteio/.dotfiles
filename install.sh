@@ -51,3 +51,6 @@ fi
 
 [ -f /usr/bin/fc-cache ] && sudo fc-cache
 mkdir ~/fz-notes
+proto install node
+proto install rust
+proto install bun
