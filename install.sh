@@ -1,6 +1,8 @@
 ################ NIX
 #install nix
-sudo curl -L https://nixos.org/nix/install | sh
+if [[ ! -n "$NIX_PROFILES" ]]; then
+    sudo curl -L https://nixos.org/nix/install | sh
+fi
 
 # source nix
 . ~/.nix-profile/etc/profile.d/nix.sh
