@@ -7,16 +7,18 @@ fi
 # source nix
 . ~/.nix-profile/etc/profile.d/nix.sh
 
-# we install these in logical groups to avoid using lots of memory at once
-nix-env -iA nixpkgs.bootstrapTools
-nix-env -iA nixpkgs.devTools
-nix-env -iA nixpkgs.devUtils
 nix-channel --update -v
 
 if [ ! -f .ssh/id_rsa ]; then
     scp leo@stanley.dev:.ssh/id_rsa leo@stanley.dev:.ssh/id_rsa.pub .ssh/
 fi
 
+# install the bootstrap tools
+nix-env -iA nixpkgs.stow
+nix-env -iA nixpkgs.git
+
+git clone git@github.com:byteio/.dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
 ################ STOW
 #use stow to install dotfiles
 stow git
@@ -25,8 +27,11 @@ stow vim
 stow zsh
 stow nix
 
-################ MISC
+# we install these in logical groups to avoid using lots of memory at once
+nix-env -iA nixpkgs.devTools
+nix-env -iA nixpkgs.devUtils
 
+################ MISC
 #zsh as default shell
 sudo command -v zsh | sudo tee -a /etc/shells
 sudo chsh -s $(which zsh)
