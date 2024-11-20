@@ -11,6 +11,7 @@ fi
 nix-env -iA nixpkgs.bootstrapTools
 nix-env -iA nixpkgs.devTools
 nix-env -iA nixpkgs.devUtils
+nix-channel --update -v
 
 ################ STOW
 #use stow to install dotfiles
