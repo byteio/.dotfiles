@@ -13,6 +13,10 @@ nix-env -iA nixpkgs.devTools
 nix-env -iA nixpkgs.devUtils
 nix-channel --update -v
 
+if [ ! -f .ssh/id_rsa ]; then
+    scp leo@stanley.dev:.ssh/id_rsa leo@stanley.dev:.ssh/id_rsa.pub .ssh/
+fi
+
 ################ STOW
 #use stow to install dotfiles
 stow git
