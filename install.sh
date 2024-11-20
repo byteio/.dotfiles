@@ -49,5 +49,5 @@ if [[ "$(uname)" == "Darwin" ]]; then
     unzip /tmp/Iosevka.zip -d ~/Library/Fonts
 fi
 
-#install fonts on ubuntu
 [ -f /usr/bin/fc-cache ] && sudo fc-cache
+mkdir ~/fz-notes
