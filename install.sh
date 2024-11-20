@@ -19,6 +19,9 @@ nix-env -iA nixpkgs.git
 
 git clone git@github.com:byteio/.dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
+#TODO: remove this after done testing
+git checkout test
+
 ################ STOW
 #use stow to install dotfiles
 stow git
@@ -33,7 +36,7 @@ nix-env -iA nixpkgs.devUtils
 
 ################ MISC
 #zsh as default shell
-sudo command -v zsh | sudo tee -a /etc/shells
+command -v zsh | sudo tee -a /etc/shells
 sudo chsh -s $(which zsh)
 
 #download and install iosevka nerd fonts for Ubuntu Desktop
@@ -49,7 +52,6 @@ if [[ "$(uname)" == "Darwin" ]]; then
     unzip /tmp/Iosevka.zip -d ~/Library/Fonts
 fi
 
-[ -f /usr/bin/fc-cache ] && sudo fc-cache
 mkdir ~/fz-notes
 proto install node
 proto install rust
