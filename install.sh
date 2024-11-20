@@ -31,10 +31,18 @@ stow nix
 sudo command -v zsh | sudo tee -a /etc/shells
 sudo chsh -s $(which zsh)
 
+#download and install iosevka nerd fonts for Ubuntu Desktop
+if [[ -n "$XDG_SESSION_DESKTOP" ]]; then
+    wget -P /tmp https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Iosevka.zip
+    unzip /tmp/Iosevka.zip -d ~/.fonts
+    [ -f /usr/bin/fc-cache ] && sudo fc-cache
+fi
 
-#download iosevka nerd fonts
-wget -P /tmp https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Iosevka.zip
-unzip /tmp/Iosevka.zip -d ~/.fonts
+#download and install iosevka nerd fonts for macOS
+if [[ "$(uname)" == "Darwin" ]]; then
+    wget -P /tmp https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Iosevka.zip
+    unzip /tmp/Iosevka.zip -d ~/Library/Fonts
+fi
 
 #install fonts on ubuntu
 [ -f /usr/bin/fc-cache ] && sudo fc-cache
